@@ -1,0 +1,15 @@
+[2025-03-02T16:09:46.178+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_pipeline.transform_data manual__2025-03-02T16:09:41.228642+00:00 [queued]>
+[2025-03-02T16:09:46.184+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_pipeline.transform_data manual__2025-03-02T16:09:41.228642+00:00 [queued]>
+[2025-03-02T16:09:46.185+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-03-02T16:09:46.194+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_data> on 2025-03-02 16:09:41.228642+00:00
+[2025-03-02T16:09:46.200+0000] {standard_task_runner.py:57} INFO - Started process 187 to run task
+[2025-03-02T16:09:46.205+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_pipeline', 'transform_data', 'manual__2025-03-02T16:09:41.228642+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_orchestration/customer_churn_dag.py', '--cfg-path', '/tmp/tmp4ac4za7u']
+[2025-03-02T16:09:46.206+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask transform_data
+[2025-03-02T16:09:46.215+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T16:09:46.234+0000] {task_command.py:415} INFO - Running <TaskInstance: customer_churn_pipeline.transform_data manual__2025-03-02T16:09:41.228642+00:00 [running]> on host 63e8fb28d7bf
+[2025-03-02T16:09:46.273+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T16:09:41.228642+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T16:09:41.228642+00:00'
+[2025-03-02T16:09:46.275+0000] {logging_mixin.py:151} INFO - Data transformation step completed.
+[2025-03-02T16:09:46.275+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-03-02T16:09:46.281+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=customer_churn_pipeline, task_id=transform_data, execution_date=20250302T160941, start_date=20250302T160946, end_date=20250302T160946
+[2025-03-02T16:09:46.301+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T16:09:46.318+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
